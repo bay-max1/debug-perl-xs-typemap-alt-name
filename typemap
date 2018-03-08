@@ -1,0 +1,18 @@
+TYPEMAP
+wchar_t *               T_WCHAR
+const wchar_t *         T_WCHAR
+
+
+INPUT
+
+T_WCHAR
+   $var = sv_to_wide_char_str(aTHX_ $arg);
+
+
+OUTPUT
+
+T_WCHAR
+   wchar_t * src;
+   if (!$var) XSRETURN_UNDEF;
+   src = (wchar_t*)$var;
+   wide_char_str_to_sv(aTHX_ src, $arg);
