@@ -18,5 +18,5 @@ WriteMakefile(
     INC               => '-I.', # e.g., '-I. -I/usr/include/other'
     # Un-comment this if you add C files to link with later:
     OBJECT            => '$(O_FILES)',
-    #TYPEMAPS          => [ 'typemap.wide_char_str' ],
+    TYPEMAPS          => [ 'typemap.wide_char_str' ],
 );
